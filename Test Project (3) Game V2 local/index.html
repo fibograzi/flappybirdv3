@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Falling Items - Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🍎 Catch the Falling Items</h1>
+            <div class="game-info">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="timer">Time: <span id="timer">60</span>s</div>
+            </div>
+        </header>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div id="gameOverScreen" class="game-over hidden">
+                <div class="game-over-content">
+                    <h2>🎮 Game Over!</h2>
+                    <p class="final-score">Final Score: <span id="finalScore">0</span></p>
+                    <button id="restartBtn" class="restart-btn">Play Again</button>
+                </div>
+            </div>
+            
+            <div id="startScreen" class="start-screen">
+                <div class="start-content">
+                    <h2>🍎 Catch the Falling Items</h2>
+                    <p>Use ← → arrow keys to move the basket</p>
+                    <p>🍎 Apples = +10 points | 💣 Bombs = -20 points</p>
+                    <p>Survive 60 seconds and get the highest score!</p>
+                    <button id="startBtn" class="start-btn">Start Game</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <p>Controls: Use ← → Arrow Keys to move</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

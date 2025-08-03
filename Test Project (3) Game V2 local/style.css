@@ -1,0 +1,228 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2d3436;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin: 20px;
+}
+
+/* Header Styles */
+.game-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-header h1 {
+    color: #e17055;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score, .timer {
+    background: #fdcb6e;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 3px solid #e17055;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.score span, .timer span {
+    color: #d63031;
+}
+
+/* Game Area */
+.game-area {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#gameCanvas {
+    border: 4px solid #e17055;
+    border-radius: 15px;
+    background: linear-gradient(180deg, #74b9ff, #a29bfe);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Start Screen */
+.start-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    z-index: 10;
+}
+
+.start-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.start-content h2 {
+    color: #e17055;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.start-content p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #636e72;
+}
+
+.start-btn, .restart-btn {
+    background: linear-gradient(45deg, #00b894, #00cec9);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(0, 184, 148, 0.3);
+    transition: all 0.3s ease;
+}
+
+.start-btn:hover, .restart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 184, 148, 0.4);
+}
+
+.start-btn:active, .restart-btn:active {
+    transform: translateY(0);
+}
+
+/* Game Over Screen */
+.game-over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    z-index: 10;
+}
+
+.game-over-content {
+    text-align: center;
+    padding: 40px;
+}
+
+.game-over-content h2 {
+    color: #e17055;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.final-score {
+    font-size: 1.5rem;
+    color: #2d3436;
+    margin-bottom: 20px;
+}
+
+.final-score span {
+    color: #d63031;
+    font-weight: bold;
+}
+
+/* Controls */
+.controls {
+    text-align: center;
+    font-size: 1rem;
+    color: #636e72;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .game-header h1 {
+        font-size: 2rem;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+    
+    .start-content, .game-over-content {
+        padding: 20px;
+    }
+    
+    .start-content h2, .game-over-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .game-info {
+        font-size: 1rem;
+    }
+    
+    .score, .timer {
+        padding: 8px 15px;
+    }
+}
